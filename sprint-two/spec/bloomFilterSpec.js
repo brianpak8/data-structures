@@ -27,10 +27,10 @@ describe('bloomFilter', function() {
     var nums = [];
     var posNums = [];
     for (var i = 0; i < 5; i++) {
-      var idx = Math.floor(Math.random * 8).toString();
+      var idx = Math.floor(Math.random * 8);
       bloomFilter.insert(idx.toString());
       nums.push(idx);
-      if (bloomFilter.query(idx)) {
+      if (bloomFilter.query(idx.toString())) {
         posNums.push(idx);
       }
     }
